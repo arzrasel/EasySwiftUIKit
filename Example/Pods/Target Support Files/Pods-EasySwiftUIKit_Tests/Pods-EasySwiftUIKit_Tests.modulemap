@@ -1,0 +1,6 @@
+framework module Pods_EasySwiftUIKit_Tests {
+  umbrella header "Pods-EasySwiftUIKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
