@@ -18,11 +18,13 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 # CREATE
 #   * pod lib create EasySwiftUIKit
+#   * ios>swift>yes>None>No
+#   * Push to git and release
 #   * pod trunk register rashedgit@gmail.com 'Rz Rasel'
 #   * pod lib lint EasySwiftUIKit.podspec --allow-warnings
 #   * pod trunk push --allow-warnings
 # UPDATE
-#   * pod lib lint --no-clean
+#   * pod lib lint --allow-warnings
 #   * Push to git and release
 #   * pod trunk push --allow-warnings
 
@@ -39,8 +41,9 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/rzrasel'
 
   s.ios.deployment_target = '11.0'
-#  s.source_files = 'Classes/**/*.swift'
-  s.source_files = 'EasySwiftUIKit/Classes/**/*'
+  s.source_files = 'Classes/**/*.swift'
+#  s.source_files = 'EasySwiftUIKit/Classes/**/*'
+#    s.source_files = 'EasySwiftUIKit/Classes/**/*.swift'
 #  s.platforms = {
 #      "ios": "11.0"
 #  }
