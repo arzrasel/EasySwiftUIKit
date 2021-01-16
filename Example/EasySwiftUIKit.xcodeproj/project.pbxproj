@@ -30,8 +30,8 @@
 /* Begin PBXFileReference section */
 		2D919477AB879EABF9C809E6 /* Pods-EasySwiftUIKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasySwiftUIKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EasySwiftUIKit_Tests/Pods-EasySwiftUIKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2ED09E49306DB6C261048F96 /* Pods-EasySwiftUIKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasySwiftUIKit_Example.release.xcconfig"; path = "Target Support Files/Pods-EasySwiftUIKit_Example/Pods-EasySwiftUIKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		341852F95C1AFB65998CA171 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		36F3726C8BDF8C3FE3C710BF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		341852F95C1AFB65998CA171 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		36F3726C8BDF8C3FE3C710BF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		506418F22F8E6470C99B4348 /* Pods_EasySwiftUIKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasySwiftUIKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* EasySwiftUIKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasySwiftUIKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		6B65D051745C7FFC9ABEF1C1 /* Pods_EasySwiftUIKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasySwiftUIKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC02F2742963BBD6C37C62C /* Pods-EasySwiftUIKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasySwiftUIKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-EasySwiftUIKit_Tests/Pods-EasySwiftUIKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E6380F2A107B24E0AB34EA51 /* Pods-EasySwiftUIKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasySwiftUIKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-EasySwiftUIKit_Example/Pods-EasySwiftUIKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F016DD9555EA0508BAD25C60 /* EasySwiftUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EasySwiftUIKit.podspec; path = ../EasySwiftUIKit.podspec; sourceTree = "<group>"; };
+		F016DD9555EA0508BAD25C60 /* EasySwiftUIKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EasySwiftUIKit.podspec; path = ../EasySwiftUIKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				2D919477AB879EABF9C809E6 /* Pods-EasySwiftUIKit_Tests.debug.xcconfig */,
 				9EC02F2742963BBD6C37C62C /* Pods-EasySwiftUIKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

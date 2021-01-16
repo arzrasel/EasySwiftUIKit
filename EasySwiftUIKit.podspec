@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasySwiftUIKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.8'
   s.summary          = 'A short description of EasySwiftUIKit.'
 
 # This description is used to generate tags and improve search results.
@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  'A short description of EasySwiftUIKit.'
                        DESC
 
-  s.homepage         = 'https://github.com/Rz Rasel/EasySwiftUIKit'
+  s.homepage         = 'https://github.com/arzrasel/EasySwiftUIKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Rz Rasel' => 'rashedgit@gmail.com' }
-  s.source           = { :git => 'https://github.com/Rz Rasel/EasySwiftUIKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/arzrasel/EasySwiftUIKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
