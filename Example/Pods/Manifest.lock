@@ -1,0 +1,16 @@
+PODS:
+  - EasySwiftUIKit (0.1.0)
+
+DEPENDENCIES:
+  - EasySwiftUIKit (from `../`)
+
+EXTERNAL SOURCES:
+  EasySwiftUIKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EasySwiftUIKit: d605ca8eda2a41dab330f638a67f38aff02b1243
+
+PODFILE CHECKSUM: 841a9edc94e031fe9ef9ce37d6008e0c9b77806e
+
+COCOAPODS: 1.8.4

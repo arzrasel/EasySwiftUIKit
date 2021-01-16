@@ -1,0 +1,22 @@
+{
+  "name": "EasySwiftUIKit",
+  "version": "0.1.0",
+  "summary": "A short description of EasySwiftUIKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Rz Rasel/EasySwiftUIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Rz Rasel": "rashedgit@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Rz Rasel/EasySwiftUIKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "EasySwiftUIKit/Classes/**/*"
+}
