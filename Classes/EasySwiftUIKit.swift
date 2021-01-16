@@ -6,9 +6,8 @@
 //
 
 import Foundation
-func onTest(value: String) {
-    print("Printed value: \(value)")
-}
+import UIKit
+
 extension UIView {
     @IBInspectable
     var cornerRadius: CGFloat {
