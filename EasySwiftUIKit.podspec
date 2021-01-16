@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 # CREATE
-#   * pod lib create EasySwiftUIKit
+#   * pod lib create EasySwiftUIKit 
 #   * ios>swift>yes>None>No
 #   * Push to git and release
 #   * pod trunk register rashedgit@gmail.com 'Rz Rasel'
