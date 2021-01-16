@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  'A swift library of EasySwiftUIKit. Just import and run project'
                        DESC
 
   s.homepage         = 'https://github.com/arzrasel/EasySwiftUIKit'
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/arzrasel/EasySwiftUIKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/rzrasel'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'EasySwiftUIKit/Classes/**/*'
   
