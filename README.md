@@ -17,6 +17,7 @@ EasySwiftUIKit is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
+pod 'EasySwiftUIKit', '~> 0.1.3'
 pod 'EasySwiftUIKit'
 ```
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'EasySwiftUIKit'
-    s.version          = '0.1.3'
+    s.version          = '0.1.4'
     s.summary          = 'A swift library of EasySwiftUIKit.'
     
 # This description is used to generate tags and improve search results.
@@ -49,6 +49,9 @@ Pod::Spec.new do |s|
     #  }
     s.source_files = 'Classes/*.swift'
     s.framework    = 'UIKit', 'Foundation', 'QuartzCore'
+    s.platforms = {
+          "ios": "9.0"
+      }
     
     #s.source_files = 'EasySwiftUIKit/Classes/**/*'
     
