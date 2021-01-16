@@ -2,7 +2,7 @@
 //  EasySwiftUIKit.swift
 //  EasySwiftUIKit
 //
-//  Created by Zaynax Ltd on 1/16/21.
+//  Created by Rz Rasel on 2021-01-16.
 //
 
 import Foundation

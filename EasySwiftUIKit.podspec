@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasySwiftUIKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A swift library of EasySwiftUIKit.'
 
 # This description is used to generate tags and improve search results.
@@ -16,6 +16,16 @@ Pod::Spec.new do |s|
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
+# CREATE
+#   * pod lib create EasySwiftUIKit
+#   * pod trunk register rashedgit@gmail.com 'Rz Rasel'
+#   * pod lib lint EasySwiftUIKit.podspec --allow-warnings
+#   * pod trunk push --allow-warnings
+# UPDATE
+#   * pod lib lint --no-clean
+#   * Push to git and release
+#   * pod trunk push --allow-warnings
+
 
   s.description      = <<-DESC
   'A swift library of EasySwiftUIKit. Just import and run project'
@@ -28,9 +38,14 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/arzrasel/EasySwiftUIKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/rzrasel'
 
-  s.ios.deployment_target = '13.0'
-
+  s.ios.deployment_target = '11.0'
+#  s.source_files = 'Classes/**/*.swift'
   s.source_files = 'EasySwiftUIKit/Classes/**/*'
+#  s.platforms = {
+#      "ios": "11.0"
+#  }
+
+  #s.source_files = 'EasySwiftUIKit/Classes/**/*'
   
   # s.resource_bundles = {
   #   'EasySwiftUIKit' => ['EasySwiftUIKit/Assets/*.png']
@@ -39,4 +54,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  #https://cocoapods.org/pods/EasySwiftUIKit
 end
