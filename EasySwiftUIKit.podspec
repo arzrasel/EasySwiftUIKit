@@ -47,8 +47,8 @@ Pod::Spec.new do |s|
     #  s.platforms = {
     #      "ios": "11.0"
     #  }
-    s.source_files = 'Classes/**/*.swift'
-#    s.framework    = 'RzRasel'
+    s.source_files = 'Classes/*.swift'
+    s.framework    = 'UIKit', 'Foundation', 'QuartzCore'
     
     #s.source_files = 'EasySwiftUIKit/Classes/**/*'
     
