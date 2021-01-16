@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'EasySwiftUIKit'
-    s.version          = '0.1.5'
+    s.version          = '0.1.6'
     s.summary          = 'A swift library of EasySwiftUIKit.'
     
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 # UPDATE
 #   * pod lib lint --allow-warnings
 #   * Push to git and release
-#   * pod trunk push --allow-warnings
+#   * pod trunk push --allow-warnings ORRR>> pod trunk push EasySwiftUIKit.podspec
     
     
     s.description      = <<-DESC
