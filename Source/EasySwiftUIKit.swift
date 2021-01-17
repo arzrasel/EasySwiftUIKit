@@ -4,6 +4,7 @@
 //
 //  Created by Rz Rasel on 2021-01-16.
 //
+//  Version = '0.1.14'
 
 import Foundation
 import UIKit
@@ -19,8 +20,8 @@ fileprivate func <<T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         return false
     }
 }
-extension UIImage {
-    public class func gifImageWithData(_ data: Data) -> UIImage? {
+public extension UIImage {
+    class func gifImageWithData(_ data: Data) -> UIImage? {
         guard let source = CGImageSourceCreateWithData(data as CFData, nil) else {
             print("image doesn't exist")
             return nil
@@ -29,7 +30,7 @@ extension UIImage {
         return UIImage.animatedImageWithSource(source)
     }
     
-    public class func gifImageWithURL(_ gifUrl:String) -> UIImage? {
+    class func gifImageWithURL(_ gifUrl:String) -> UIImage? {
         guard let bundleURL: URL = URL(string: gifUrl) else {
             print("image named \"\(gifUrl)\" doesn't exist")
             return nil
@@ -42,7 +43,7 @@ extension UIImage {
         return gifImageWithData(imageData)
     }
     
-    public class func gifImageWithName(_ name: String) -> UIImage? {
+    class func gifImageWithName(_ name: String) -> UIImage? {
         guard let bundleURL = Bundle.main
                 .url(forResource: name, withExtension: "gif") else {
             print("SwiftGif: This image named \"\(name)\" does not exist")
@@ -174,7 +175,7 @@ extension UIImage {
     }
     //iOSDevCenters+GIF.swift
 }
-extension UIImageView {
+public extension UIImageView {
     var contentClippingRect: CGRect {
         guard let image = image else { return bounds }
         guard contentMode == .scaleAspectFit else { return bounds }
@@ -194,7 +195,7 @@ extension UIImageView {
         return CGRect(x: x, y: y, width: size.width, height: size.height)
     }
 }
-extension UIImageView {
+public extension UIImageView {
     func onLoad(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -215,7 +216,7 @@ extension UIImageView {
     }
     //imageView.downloaded(from: "https://transition.jpg")
 }
-extension UIImage {
+public extension UIImage {
     func scaled(with scale: CGFloat) -> UIImage? {
         // size has to be integer, otherwise it could get white lines
         let size = CGSize(width: floor(self.size.width * scale), height: floor(self.size.height * scale))
@@ -226,14 +227,14 @@ extension UIImage {
         return image
     }
 }
-extension UIImage {
+public extension UIImage {
     func imageResized(to size: CGSize) -> UIImage {
         return UIGraphicsImageRenderer(size: size).image { _ in
             draw(in: CGRect(origin: .zero, size: size))
         }
     }
 }
-extension NSAttributedString {
+public extension NSAttributedString {
     func height(withConstrainedWidth width: CGFloat) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, context: nil)
@@ -246,7 +247,7 @@ extension NSAttributedString {
         return ceil(boundingBox.width)
     }
 }
-extension String {
+public extension String {
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
@@ -265,7 +266,7 @@ public struct Padding {
     var right: CGFloat = 0.0
     var bottom: CGFloat = 0.0
 }
-extension String {
+public extension String {
     func widthOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
@@ -361,7 +362,7 @@ extension String {
         return URL(fileURLWithPath: self).pathExtension
     }
 }
-extension String {
+public extension String {
     func matchesRegex(_ regex: String) -> [[String]] {
         let nsString = self as NSString
         return (try? NSRegularExpression(pattern: regex, options: []))?.matches(in: self, options: [], range: NSMakeRange(0, count)).map { match in
@@ -408,7 +409,7 @@ extension String {
         return htmlToAttributedString?.string ?? ""
     }
 }
-extension Data {
+public extension Data {
     func jsonString() -> String {
         return String(data: self, encoding: .utf8)!
     }
@@ -430,7 +431,7 @@ extension Data {
         //https://stackoverflow.com/questions/60889362/swift-jsondecoder-passing-class-type-as-parameter-to-decode-model-using-gene
     }
 }
-extension Encodable {
+public extension Encodable {
     func jsonEncode() -> Data {
         var jsonData: Data!
         do {
@@ -515,13 +516,13 @@ extension Encodable {
     //    debugPrint("DEBUG_LOG_PRINT: decodedSentences \(String(describing: searchWordListTemp)) line: \(#line)")
     //    searchWordListTemp.jsonString().dataStore(forKey: "search_word_list")
 }
-extension Int {
+public extension Int {
     func format(format: String) -> String {
         return String(format: "%\(format)d", self)
     }
 }
 
-extension Double {
+public extension Double {
     func format(format: String) -> String {
         return String(format: "%\(format)f", self)
     }
@@ -533,8 +534,8 @@ extension Double {
         }
     }
 }
-var dismissDialogController: (() -> Void)!
-extension UIViewController {
+public var dismissDialogController: (() -> Void)!
+public extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
@@ -600,7 +601,7 @@ extension UIViewController {
         closeDialogController()
     }
 }
-extension UIViewController {
+public extension UIViewController {
     func presentDetail(_ viewControllerToPresent: UIViewController) {
         let transition = CATransition()
         transition.duration = 0.25
@@ -679,7 +680,7 @@ extension UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 }
-extension CATransition {
+public extension CATransition {
     //New viewController will appear from bottom of screen.
     func segueFromBottom() -> CATransition {
         self.duration = 0.375 //set the duration to whatever you'd like.
@@ -721,7 +722,7 @@ extension CATransition {
         return self
     }
 }
-extension UIImage {
+public extension UIImage {
     var isPortrait:  Bool    { size.height > size.width }
     var isLandscape: Bool    { size.width > size.height }
     var breadth:     CGFloat { min(size.width, size.height) }
@@ -777,14 +778,14 @@ extension UIImage {
 //    }
 //  }
 //}
-enum RoundType {
+public enum RoundType {
     case top
     case none
     case bottom
     case both
 }
 
-extension UIView {
+public extension UIView {
     func round(with type: RoundType, radius: CGFloat = 3.0) {
         var corners: UIRectCorner
         
@@ -806,7 +807,7 @@ extension UIView {
         }
     }
 }
-extension UIVisualEffectView {
+public extension UIVisualEffectView {
     
     func fadeInEffect(_ style:UIBlurEffect.Style = .light, withDuration duration: TimeInterval = 1.0) {
         if #available(iOS 10.0, *) {
@@ -840,7 +841,7 @@ extension UIVisualEffectView {
     }
     //https://gist.github.com/gunhansancar/a5153cd4df9e81dd95ad04731b4ddf43
 }
-extension UIImageView {
+public extension UIImageView {
     func enableZoom() {
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(startZooming(_:)))
         isUserInteractionEnabled = true
@@ -855,7 +856,7 @@ extension UIImageView {
         sender.scale = 1
     }
 }
-extension UIColor {
+public extension UIColor {
     convenience init(red: Int, green: Int, blue: Int, opacity: CGFloat) {
         let newRed = CGFloat(red)/255
         let newGreen = CGFloat(green)/255
@@ -864,18 +865,18 @@ extension UIColor {
     }
 }
 @IBDesignable
-class DesignableView: UIView {
+public class DesignableView: UIView {
 }
 
 @IBDesignable
-class DesignableButton: UIButton {
+public class DesignableButton: UIButton {
 }
 
 @IBDesignable
-class DesignableLabel: UILabel {
+public class DesignableLabel: UILabel {
 }
 
-extension UIView {
+public extension UIView {
     @IBInspectable
     var cornerRadius: CGFloat {
         get {
@@ -960,7 +961,7 @@ extension UIView {
         }
     }
 }
-extension UILabel {
+public extension UILabel {
     @IBInspectable
     var StrikeThrough: Bool {
         get {
@@ -982,7 +983,7 @@ extension UILabel {
     }
 }
 @IBDesignable
-class uiLabel: UILabel {
+public class uiLabel: UILabel {
 
     @IBInspectable var StrikeOutThrough: Bool = false {
         didSet{
@@ -990,7 +991,7 @@ class uiLabel: UILabel {
         }
     }
 }
-extension UIButton {
+public extension UIButton {
     @IBInspectable
     var alignImageRight: Bool {
         get {
@@ -1024,7 +1025,7 @@ extension UIButton {
 //        }
 //    }
 }
-extension UIView {
+public extension UIView {
     func cornerRadiusForm(cornerRadius argcornerRadius: CGFloat, cornersRounded argRoundedCorners: UIRectCorner) {
         self.layer.cornerRadius = argcornerRadius
         self.layer.masksToBounds = true
@@ -1051,7 +1052,7 @@ extension UIView {
         debugPrint("view.cornerRadiusForm(cornerRadius: 12.0, cornersRounded: [.topLeft, .topRight])")
     }
 }
-extension UIView {
+public extension UIView {
     func makeBlurEffectView(style:UIBlurEffect.Style? = nil) -> UIVisualEffectView{
         let blurEffectView = UIVisualEffectView()
         
@@ -1076,14 +1077,14 @@ extension UIView {
         return blurEffectView
     }
 }
-extension String {
+public extension String {
     func strikeThrough() -> NSAttributedString {
         let attributeString =  NSMutableAttributedString(string: self)
         attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range:NSMakeRange(0, attributeString.length))
         return attributeString
     }
 }
-extension UILabel {
+public extension UILabel {
     func strikeThrough() {
         self.strikeThrough(isStrikeThrough: true)
     }
