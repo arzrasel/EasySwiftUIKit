@@ -1104,3 +1104,6 @@ extension UILabel {
         }
     }
 }
+public func onTest(value: String) {
+    print("Tying to print the value: \(value)")
+}
