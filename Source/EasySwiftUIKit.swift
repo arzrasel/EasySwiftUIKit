@@ -4,7 +4,7 @@
 //
 //  Created by Rz Rasel on 2021-01-16.
 //
-//  Version = '0.1.15'
+//  Version = '1.0.0'
 
 import Foundation
 import UIKit
