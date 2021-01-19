@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/EasySwiftUIKit.svg?style=flat)](https://cocoapods.org/pods/EasySwiftUIKit)
 [![License](https://img.shields.io/cocoapods/l/EasySwiftUIKit.svg?style=flat)](https://cocoapods.org/pods/EasySwiftUIKit)
 [![Platform](https://img.shields.io/cocoapods/p/EasySwiftUIKit.svg?style=flat)](https://cocoapods.org/pods/EasySwiftUIKit)
+[![GitHub release](https://img.shields.io/github/tag/arzrasel/swiftshield.svg)](https://github.com/arzrasel/EasySwiftUIKit/releases)
 
 ## Example
 
