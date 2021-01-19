@@ -4,7 +4,7 @@
 //
 //  Created by Rz Rasel on 2021-01-16.
 //
-//  Version = '0.1.14'
+//  Version = '0.1.15'
 
 import Foundation
 import UIKit
@@ -1103,6 +1103,59 @@ public extension UILabel {
                 return
             }
         }
+    }
+}
+public extension String {
+    func trimmed() -> String {
+        return self.replacingOccurrences(of: "^\\s+|\\s+|\\s+$", with: " ", options: .regularExpression, range: nil)
+    }
+    func titlecased() -> String {
+        if self.trimmingCharacters(in: .whitespacesAndNewlines).count <= 1 {
+            return self.uppercased()
+        }
+        let sentenceArray = self.trimmingCharacters(in: .whitespacesAndNewlines).trimmed().lowercased().components(separatedBy: " ")
+        var convertedSentence = ""
+        for var sentence in sentenceArray {
+            if sentence.first == " "{
+                sentence.removeFirst()
+            }
+            
+            if sentence.first != nil{
+                convertedSentence += sentence.prefix(1).uppercased() + String(sentence.dropFirst() + " ")
+            }
+        }
+        return convertedSentence
+        //        if self.count <= 1 {
+        //            return self.uppercased()
+        //        }
+        //        self.lowercased()
+        //        let regex = try! NSRegularExpression(pattern: "(?=\\S)[A-Z]", options: [])
+        //        let range = NSMakeRange(1, self.count - 1)
+        //        var titlecased = regex.stringByReplacingMatches(in: self, range: range, withTemplate: " $0")
+        //
+        //        for i in titlecased.indices {
+        //            if i == titlecased.startIndex || titlecased[titlecased.index(before: i)] == " " {
+        //                titlecased.replaceSubrange(i...i, with: String(titlecased[i]).uppercased())
+        //            }
+        //        }
+        //        return titlecased
+    }
+    func sentencecased() -> String {
+        if self.trimmingCharacters(in: .whitespacesAndNewlines).count <= 1 {
+            return self.uppercased()
+        }
+        let sentenceArray = self.trimmingCharacters(in: .whitespacesAndNewlines).trimmed().lowercased().components(separatedBy: ".")
+        var convertedSentence = ""
+        for var sentence in sentenceArray {
+            if sentence.first == " "{
+                sentence.removeFirst()
+            }
+            
+            if sentence.first != nil{
+                convertedSentence += sentence.prefix(1).uppercased() + String(sentence.dropFirst() + "." + " ")
+            }
+        }
+        return convertedSentence
     }
 }
 public func onTest(value: String) {
