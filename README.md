@@ -1,6 +1,6 @@
 # EasySwiftUIKit
 
-[![CI Status]("https://img.shields.io/travis/Rz Rasel/EasySwiftUIKit.svg?style=flat")]("https://travis-ci.org/Rz Rasel/EasySwiftUIKit")
+[![CI Status](https://img.shields.io/travis/Rz%20Rasel/EasySwiftUIKit.svg?style=flat)](https://travis-ci.org/Rz%20Rasel/EasySwiftUIKit)
 [![Version](https://img.shields.io/cocoapods/v/EasySwiftUIKit.svg?style=flat)](https://cocoapods.org/pods/EasySwiftUIKit)
 [![License](https://img.shields.io/cocoapods/l/EasySwiftUIKit.svg?style=flat)](https://cocoapods.org/pods/EasySwiftUIKit)
 [![Platform](https://img.shields.io/cocoapods/p/EasySwiftUIKit.svg?style=flat)](https://cocoapods.org/pods/EasySwiftUIKit)
