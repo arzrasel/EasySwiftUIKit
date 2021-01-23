@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         onTest(value: "hi")
-        FileUtils.JSON.readFileUsage()
+        FileUtils.JSON.usageReadFile()
     }
 
     override func didReceiveMemoryWarning() {
