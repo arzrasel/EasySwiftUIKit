@@ -4,7 +4,8 @@
 //
 //  Created by Rz Rasel on 2021-01-16.
 //
-//  Version = '1.0.0'
+// EasySwiftUIKit Version = '1.0.1'
+//  Version = '1.0.1'
 
 import Foundation
 import UIKit

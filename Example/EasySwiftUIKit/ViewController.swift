@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         onTest(value: "hi")
+        FileUtils.JSON.readFileUsage()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 }
-
+struct testEasySwiftUIKit {
+    var data: QuantumValue!
+}

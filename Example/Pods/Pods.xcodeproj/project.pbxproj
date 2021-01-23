@@ -11,6 +11,8 @@
 		24697F655253910457E98AD141CA5A83 /* Pods-EasySwiftUIKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E7F0C63FF879D5B0071DE0647E42F2 /* Pods-EasySwiftUIKit_Example-dummy.m */; };
 		72C6541203D47F85D8BCA64C29F67626 /* EasySwiftUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A99F063B6912098D64BCE2A80574B3EC /* EasySwiftUIKit-dummy.m */; };
 		76935C7620D1AF0C3818D1969A9BAD45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8845FC9525BBD0F1008D68A0 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8845FC9425BBD0F1008D68A0 /* FileUtils.swift */; };
+		8845FC9A25BBD101008D68A0 /* QuantumValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8845FC9925BBD101008D68A0 /* QuantumValue.swift */; };
 		8863ADF125B2FA9800ABD6F0 /* EasySwiftUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */; };
 		C7E4529F13CFF7A44AB43416D2AE145B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		DF4E62DFB2491D13A81A4E22FA1D4D88 /* EasySwiftUIKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D50AC300C0FA518AFBE9E4AC0070F6 /* EasySwiftUIKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -50,6 +52,8 @@
 		6A6718CB4398B7B02AB021705A7BED20 /* Pods-EasySwiftUIKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EasySwiftUIKit_Example.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		78124527BBE0F175C0CBF758E64B365B /* Pods-EasySwiftUIKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EasySwiftUIKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8845FC9425BBD0F1008D68A0 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		8845FC9925BBD101008D68A0 /* QuantumValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantumValue.swift; sourceTree = "<group>"; };
 		8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySwiftUIKit.swift; sourceTree = "<group>"; };
 		8B1DA630E58E1BBAA8370425DA018632 /* EasySwiftUIKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasySwiftUIKit.modulemap; sourceTree = "<group>"; };
 		97A5D81E2C7DA1D31A822C03C6C6F93E /* EasySwiftUIKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EasySwiftUIKit-Info.plist"; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */,
+				8845FC9425BBD0F1008D68A0 /* FileUtils.swift */,
+				8845FC9925BBD101008D68A0 /* QuantumValue.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -386,6 +392,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8845FC9525BBD0F1008D68A0 /* FileUtils.swift in Sources */,
+				8845FC9A25BBD101008D68A0 /* QuantumValue.swift in Sources */,
 				8863ADF125B2FA9800ABD6F0 /* EasySwiftUIKit.swift in Sources */,
 				72C6541203D47F85D8BCA64C29F67626 /* EasySwiftUIKit-dummy.m in Sources */,
 			);
