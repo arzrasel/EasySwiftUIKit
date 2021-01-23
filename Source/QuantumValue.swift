@@ -57,3 +57,28 @@ public extension QuantumValue {
     //    }
     //}
 }
+public enum CodableType: Codable {
+    case string(String)
+    case arrString([String])
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let string = try? container.decode(String.self) {
+            self = .string(string)
+            return
+        }
+        if let arrString = try? container.decode([String].self) {
+            self = .arrString(arrString)
+            return
+        }
+        throw DecodingError.typeMismatch(CodableType.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for CodableType"))
+    }
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .string(let string):
+            try container.encode(string)
+        case .arrString(let arrString):
+            try container.encode(arrString)
+        }
+    }
+}
