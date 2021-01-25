@@ -23,7 +23,7 @@ pod 'EasySwiftUIKit'
 
 ## Author
 
-Rz Rasel, rashedgit@gmail.com
+Rz Rasel
 
 ## License
 
