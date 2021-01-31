@@ -19,9 +19,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 EasySwiftUIKit is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-```ruby
+```podInstallEasySwiftUIKit01
 pod 'EasySwiftUIKit'
+```
 or
+```podInstallEasySwiftUIKit02
 pod 'EasySwiftUIKit', '~> 1.0'
 ```
 
