@@ -3,12 +3,12 @@
 //  EasySwiftUIKit
 //
 //  Created by Rz Rasel on 2021-01-31
-//EasySwiftUIKit Version (dateFormat implementation and integration at) - 1.0.2
+//EasySwiftUIKit Version (DateFormat implementation and integration at) - 1.0.2
 //
 
 import Foundation
 
-extension String {
+public extension String {
     func dateFormat(toFormat argToFormat: String = "yyyy-MM-dd HH:mm:ss", withFormat argWithFormat: String = "yyyy-MM-dd HH:mm:ss") -> String! {
         var formedDate: String!
         let dateFormatter = DateFormatter()
@@ -21,7 +21,7 @@ extension String {
         formedDate = dateFormatter.string(from: convertedDate)
         return formedDate
     }
-    public static func usageDateFormat() {
+    static func usageDateFormat() {
         //"2021-01-31".dateFormat(toFormat: "yyyy-MM-dd")
         print("=======================>\(String(describing: "2021-01-31".dateFormat(toFormat: "yyyy-MM-dd")))")
     }
