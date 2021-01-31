@@ -3,7 +3,7 @@
 //  EasySwiftUIKit
 //
 //  Created by Rz Rasel on 2021-01-31
-//Version (dateFormat implementation and integration at): 1.0.2
+//EasySwiftUIKit Version (dateFormat implementation and integration at) - 1.0.2
 //
 
 import Foundation
