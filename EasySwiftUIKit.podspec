@@ -16,7 +16,7 @@
 #   * pod lib lint --allow-warnings
 #   * Push to git and release
 #   * pod trunk push --allow-warnings ORRR>> pod trunk push EasySwiftUIKit.podspec --allow-warnings
-# EasySwiftUIKit Version = 1.0.1
+# EasySwiftUIKit Version = 1.0.2
 
 Pod::Spec.new do |s|
     s.name             = 'EasySwiftUIKit'
