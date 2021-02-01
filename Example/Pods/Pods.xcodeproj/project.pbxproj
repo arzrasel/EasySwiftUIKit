@@ -16,6 +16,7 @@
 		8845FC9A25BBD101008D68A0 /* QuantumValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8845FC9925BBD101008D68A0 /* QuantumValue.swift */; };
 		8863ADF125B2FA9800ABD6F0 /* EasySwiftUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */; };
 		88FE166125C7BA860016D8B1 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE166025C7BA860016D8B1 /* Contents.swift */; };
+		88FE166625C7BE210016D8B1 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE166525C7BE210016D8B1 /* UserDefaultsExtension.swift */; };
 		C7E4529F13CFF7A44AB43416D2AE145B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		DF4E62DFB2491D13A81A4E22FA1D4D88 /* EasySwiftUIKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D50AC300C0FA518AFBE9E4AC0070F6 /* EasySwiftUIKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0E2BAB62DC78B7C1CD9BD8FEBECB121 /* Pods-EasySwiftUIKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27EE456CB2DAAD408466740DAF4D19C0 /* Pods-EasySwiftUIKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +60,7 @@
 		8845FC9925BBD101008D68A0 /* QuantumValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantumValue.swift; sourceTree = "<group>"; };
 		8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySwiftUIKit.swift; sourceTree = "<group>"; };
 		88FE166025C7BA860016D8B1 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
+		88FE166525C7BE210016D8B1 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		8B1DA630E58E1BBAA8370425DA018632 /* EasySwiftUIKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasySwiftUIKit.modulemap; sourceTree = "<group>"; };
 		97A5D81E2C7DA1D31A822C03C6C6F93E /* EasySwiftUIKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EasySwiftUIKit-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -192,6 +194,7 @@
 				8845FC9425BBD0F1008D68A0 /* FileUtils.swift */,
 				8845FC9925BBD101008D68A0 /* QuantumValue.swift */,
 				88FE166025C7BA860016D8B1 /* Contents.swift */,
+				88FE166525C7BE210016D8B1 /* UserDefaultsExtension.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				8845FC9A25BBD101008D68A0 /* QuantumValue.swift in Sources */,
 				8863ADF125B2FA9800ABD6F0 /* EasySwiftUIKit.swift in Sources */,
 				88319A9125C6B6A6002A2B20 /* DateFormat.swift in Sources */,
+				88FE166625C7BE210016D8B1 /* UserDefaultsExtension.swift in Sources */,
 				72C6541203D47F85D8BCA64C29F67626 /* EasySwiftUIKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
