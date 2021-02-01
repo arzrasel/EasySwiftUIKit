@@ -17,6 +17,9 @@
 		8863ADF125B2FA9800ABD6F0 /* EasySwiftUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */; };
 		88FE166125C7BA860016D8B1 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE166025C7BA860016D8B1 /* Contents.swift */; };
 		88FE166625C7BE210016D8B1 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE166525C7BE210016D8B1 /* UserDefaultsExtension.swift */; };
+		88FE166B25C7C0A40016D8B1 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE166A25C7C0A40016D8B1 /* StringExtensions.swift */; };
+		88FE167025C7C0DA0016D8B1 /* EZSwiftFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE166F25C7C0DA0016D8B1 /* EZSwiftFunctions.swift */; };
+		88FE167525C7C14D0016D8B1 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE167425C7C14D0016D8B1 /* DateExtensions.swift */; };
 		C7E4529F13CFF7A44AB43416D2AE145B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		DF4E62DFB2491D13A81A4E22FA1D4D88 /* EasySwiftUIKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D50AC300C0FA518AFBE9E4AC0070F6 /* EasySwiftUIKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0E2BAB62DC78B7C1CD9BD8FEBECB121 /* Pods-EasySwiftUIKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27EE456CB2DAAD408466740DAF4D19C0 /* Pods-EasySwiftUIKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,6 +64,9 @@
 		8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySwiftUIKit.swift; sourceTree = "<group>"; };
 		88FE166025C7BA860016D8B1 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		88FE166525C7BE210016D8B1 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		88FE166A25C7C0A40016D8B1 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		88FE166F25C7C0DA0016D8B1 /* EZSwiftFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZSwiftFunctions.swift; sourceTree = "<group>"; };
+		88FE167425C7C14D0016D8B1 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		8B1DA630E58E1BBAA8370425DA018632 /* EasySwiftUIKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasySwiftUIKit.modulemap; sourceTree = "<group>"; };
 		97A5D81E2C7DA1D31A822C03C6C6F93E /* EasySwiftUIKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EasySwiftUIKit-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -195,6 +201,9 @@
 				8845FC9925BBD101008D68A0 /* QuantumValue.swift */,
 				88FE166025C7BA860016D8B1 /* Contents.swift */,
 				88FE166525C7BE210016D8B1 /* UserDefaultsExtension.swift */,
+				88FE166A25C7C0A40016D8B1 /* StringExtensions.swift */,
+				88FE166F25C7C0DA0016D8B1 /* EZSwiftFunctions.swift */,
+				88FE167425C7C14D0016D8B1 /* DateExtensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -401,8 +410,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FE166B25C7C0A40016D8B1 /* StringExtensions.swift in Sources */,
+				88FE167525C7C14D0016D8B1 /* DateExtensions.swift in Sources */,
 				8845FC9525BBD0F1008D68A0 /* FileUtils.swift in Sources */,
 				88FE166125C7BA860016D8B1 /* Contents.swift in Sources */,
+				88FE167025C7C0DA0016D8B1 /* EZSwiftFunctions.swift in Sources */,
 				8845FC9A25BBD101008D68A0 /* QuantumValue.swift in Sources */,
 				8863ADF125B2FA9800ABD6F0 /* EasySwiftUIKit.swift in Sources */,
 				88319A9125C6B6A6002A2B20 /* DateFormat.swift in Sources */,
