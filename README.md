@@ -1,5 +1,6 @@
 # EasySwiftUIKit
 
+[![Rz Rasel](https://raw.githubusercontent.com/arzrasel/svg/main/rz-rasel-blue.svg)](https://github.com/rzrasel)
 [![CI Status](https://img.shields.io/travis/Rashed/EasySwiftUIKit.svg?style=flat)](https://travis-ci.org/Rashed/EasySwiftUIKit)
 [![Version](https://img.shields.io/cocoapods/v/EasySwiftUIKit.svg?style=flat)](https://cocoapods.org/pods/EasySwiftUIKit)
 [![License](https://img.shields.io/cocoapods/l/EasySwiftUIKit.svg?style=flat)](https://cocoapods.org/pods/EasySwiftUIKit)
