@@ -21,7 +21,7 @@ public extension String {
         formedDate = dateFormatter.string(from: convertedDate)
         return formedDate
     }
-    static func usageDateFormat() {
+    func usageDateFormat() {
         //"2021-01-31".dateFormat(toFormat: "yyyy-MM-dd")
         print("=======================>\(String(describing: "2021-01-31".dateFormat(toFormat: "yyyy-MM-dd")))")
     }
