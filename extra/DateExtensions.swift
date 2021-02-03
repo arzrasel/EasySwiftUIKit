@@ -294,7 +294,7 @@ extension Date {
     
     #if os(iOS) || os(tvOS)
     
-    /// EZSE : Gets the international standard(ISO8601) representation of date
+    /// R : Gets the international standard(ISO8601) representation of date
     @available(iOS 10.0, *)
     @available(tvOS 10.0, *)
     public var iso8601: String {

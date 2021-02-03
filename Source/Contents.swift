@@ -2,8 +2,8 @@
 //  Contents.swift
 //  EasySwiftUIKit
 //
-//  Created by Rz Rasel on 2021-02-01
-//EasySwiftUIKit Version (alert implementation and integration at) - 1.0.3
+//  Created by Rz Rasel on 2021-02-03
+//EasySwiftUIKit Version (UIViewController->alert implementation and integration at) - 1.0.3
 //
 
 import Foundation
