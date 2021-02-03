@@ -16,6 +16,31 @@ import Foundation
     import UIKit
 #endif
 
+public extension String {
+    func dateToString(toFormat argToFormat: String = "yyyy-MM-dd HH:mm:ss", withFormat argFormat: String = "yyyy-MM-dd HH:mm:ss") -> String! {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = argToFormat
+        guard let convertedDate = dateFormatter.date(from: self) else {
+            print("Unexpected date formete error: \(self) date formate by  \(argToFormat)")
+            return nil
+        }
+        dateFormatter.dateFormat = argFormat
+        return dateFormatter.string(from: convertedDate)
+    }
+    func dateToDay(toFormat argToFormat: String = "yyyy-MM-dd HH:mm:ss") -> String! {
+        return dateToString(toFormat: argToFormat, withFormat: "dd")
+    }
+    func dateToDayFullName(toFormat argToFormat: String = "yyyy-MM-dd HH:mm:ss") -> String! {
+        return dateToString(toFormat: argToFormat, withFormat: "EEEE")
+    }
+    func dateToDayShortName(toFormat argToFormat: String = "yyyy-MM-dd HH:mm:ss") -> String! {
+        return dateToString(toFormat: argToFormat, withFormat: "EEEE").replacingOccurrences(of: "day", with: "")
+    }
+    func dateToDayTinyName(toFormat argToFormat: String = "yyyy-MM-dd HH:mm:ss") -> String! {
+        return dateToString(toFormat: argToFormat, withFormat: "EE")
+    }
+}
+
 extension String {
     /// RZ RASEL: Init string with a base64 encoded string
     init ? (base64: String) {
