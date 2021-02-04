@@ -27,6 +27,16 @@ public extension String {
         dateFormatter.dateFormat = argFormat
         return dateFormatter.string(from: convertedDate)
     }
+    func dateToDate(toFormat argToFormat: String = "yyyy-MM-dd HH:mm:ss", withFormat argFormat: String = "yyyy-MM-dd HH:mm:ss") -> Date! {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = argToFormat
+        guard let convertedDate = dateFormatter.date(from: self) else {
+            print("Unexpected date formete error: \(self) date formate by  \(argToFormat)")
+            return nil
+        }
+        dateFormatter.dateFormat = argFormat
+        return dateFormatter.date(from: dateFormatter.string(from: convertedDate))
+    }
     func dateToDay(toFormat argToFormat: String = "yyyy-MM-dd HH:mm:ss") -> String! {
         return dateToString(toFormat: argToFormat, withFormat: "dd")
     }
