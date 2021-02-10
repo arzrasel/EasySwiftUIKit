@@ -2,10 +2,10 @@
 //  EasySwiftUIKit.swift
 //  EasySwiftUIKit
 //
-//  Created by Rz Rasel on 2021-01-16.
+//  Created by Rz Rasel on 2021-01-16
 //
-// EasySwiftUIKit Version = '1.0.1'
-//  Version = '1.0.1'
+// EasySwiftUIKit Version - '1.0.1'
+//  Version - '1.0.1'
 
 import Foundation
 import UIKit
