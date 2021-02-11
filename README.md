@@ -30,7 +30,7 @@ pod 'EasySwiftUIKit', '~> 1.0'
 
 ## Author
 
-Rz Rasel
+Md. Rashed - Uz - Zaman (Rz Rasel)
 
 ## License
 
