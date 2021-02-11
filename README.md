@@ -17,7 +17,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-EasySwiftUIKit is available through [CocoaPods](https://cocoapods.org). To install
+EasySwiftUIKit is available through [CocoaPods](https://cocoapods.org/pods/EasySwiftUIKit). To install
 it, simply add the following line to your Podfile:
 
 ```podInstallEasySwiftUIKit01
