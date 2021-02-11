@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://github.com/arzrasel/EasySwiftUIKit'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
-    s.author           = { 'Rz Rasel' => 'rashedgit@gmail.com' }
+    s.author           = { 'Md. Rashed - Uz - Zaman (Rz Rasel)' => 'rashedgit@gmail.com' }
     s.source           = { :git => 'https://github.com/arzrasel/EasySwiftUIKit.git', :tag => s.version.to_s }
     # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
     
