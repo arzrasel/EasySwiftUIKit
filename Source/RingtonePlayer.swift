@@ -23,11 +23,13 @@ public class RingtonePlayer {
     private var localSoundFile: String!
     private var sysSoundFile: String!
     private var sysSoundId: SystemSoundID!
+    private var isClose = false
     //
     public init() {
         timeInterval = 1
         pauseInterval = 1000
         sysSoundId = 0
+        isClose = false
     }
     public func withInterval(withTimeInterval: TimeInterval = 1) -> RingtonePlayer {
         timeInterval = withTimeInterval
@@ -48,6 +50,12 @@ public class RingtonePlayer {
     public func withBuzzingTime(buzzingTime: Int) -> RingtonePlayer {
         buzzingTotalTime = buzzingTime
         return self
+    }
+    public func close() {
+        isClose = true
+        if audioPlayer != nil {
+            audioPlayer?.pause()
+        }
     }
     public func onPlay(completion: @escaping (Bool, Int) -> Void) {
         isKeepBuzzing = true
@@ -89,6 +97,9 @@ public class RingtonePlayer {
 //        }
 //    }
     private func playSound(soundFile: String, pauseTime: UInt32 = 1000) {
+        if isClose {
+            return
+        }
         DispatchQueue.global(qos: .utility).async {
 //            var audioPlayer: AVAudioPlayer?
             //        let path = Bundle.main.path(forResource: "example.mp3", ofType:nil)!
@@ -105,6 +116,9 @@ public class RingtonePlayer {
     }
     //    public static func playSystemSound(soundFile: SystemSoundID = 1016) {
     private func playSystemSound(soundFile: SystemSoundID = 1016, pauseTime: UInt32 = 1000) {
+        if isClose {
+            return
+        }
         DispatchQueue.global(qos: .utility).async {
             // create a sound ID, in this case its the tweet sound.
             let systemSoundID: SystemSoundID = soundFile
