@@ -4,14 +4,14 @@
 //
 //  Created by Rz Rasel on 2021-02-10
 //
-// EasySwiftUIKit Version - '1.0.3.02'
-//  Version - '1.0.3.02'
+// EasySwiftUIKit Version - '1.0.3.03'
+//  Version - '1.0.3.03'
 
 
 import Foundation
 import AVFoundation
 
-class RingtonePlayer {
+public class RingtonePlayer {
     public var audioPlayer: AVAudioPlayer?
     var isKeepBuzzing: Bool = false
 //    var isKeepBuzzing: Bool = true
