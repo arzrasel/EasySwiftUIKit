@@ -18,11 +18,11 @@
 #   * [pod lib lint --allow-warnings --no-clean --verbose]
 #   * Push to git and release
 #   * pod trunk push --allow-warnings ORRR>> pod trunk push EasySwiftUIKit.podspec --allow-warnings
-# EasySwiftUIKit Version - 1.0.3.03
+# EasySwiftUIKit Version - 1.0.3.04
 
 Pod::Spec.new do |s|
     s.name             = 'EasySwiftUIKit'
-    s.version          = '1.0.3.03'
+    s.version          = '1.0.3.04'
     s.summary          = 'A short description of EasySwiftUIKit.'
 
     # This description is used to generate tags and improve search results.

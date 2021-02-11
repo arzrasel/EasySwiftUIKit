@@ -53,6 +53,7 @@ public class RingtonePlayer {
     }
     public func close() {
         isClose = true
+        isKeepBuzzing = false
         if audioPlayer != nil {
             audioPlayer?.pause()
         }
