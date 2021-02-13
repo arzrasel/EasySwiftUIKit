@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 extension UIImage {
-    public func resized(to: CGSize) -> UIImage {
-        return crop(to: to)
+    public func resized(resizedTo: CGSize) -> UIImage {
+        return crop(cropTo: resizedTo)
     }
-    public func crop(to: CGSize) -> UIImage {
+    public func crop(cropTo: CGSize) -> UIImage {
         
         guard let cgimage = self.cgImage else { return self }
         let contextImage: UIImage = UIImage(cgImage: cgimage)
@@ -21,16 +22,16 @@ extension UIImage {
         //Set to square
         var posX: CGFloat = 0.0
         var posY: CGFloat = 0.0
-        let cropAspect: CGFloat = to.width / to.height
+        let cropAspect: CGFloat = cropTo.width / cropTo.height
         
-        var cropWidth: CGFloat = to.width
-        var cropHeight: CGFloat = to.height
+        var cropWidth: CGFloat = cropTo.width
+        var cropHeight: CGFloat = cropTo.height
         
-        if to.width > to.height { //Landscape
+        if cropTo.width > cropTo.height { //Landscape
             cropWidth = contextSize.width
             cropHeight = contextSize.width / cropAspect
             posY = (contextSize.height - cropHeight) / 2
-        } else if to.width < to.height { //Portrait
+        } else if cropTo.width < cropTo.height { //Portrait
             cropHeight = contextSize.height
             cropWidth = contextSize.height * cropAspect
             posX = (contextSize.width - cropWidth) / 2
@@ -54,8 +55,8 @@ extension UIImage {
         // Create a new image based on the imageRef and rotate back to the original orientation
         let cropped: UIImage = UIImage(cgImage: imageRef, scale: self.scale, orientation: self.imageOrientation)
         
-        UIGraphicsBeginImageContextWithOptions(to, false, self.scale)
-        cropped.draw(in: CGRect(x: 0, y: 0, width: to.width, height: to.height))
+        UIGraphicsBeginImageContextWithOptions(cropTo, false, self.scale)
+        cropped.draw(in: CGRect(x: 0, y: 0, width: cropTo.width, height: cropTo.height))
         let resized = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
