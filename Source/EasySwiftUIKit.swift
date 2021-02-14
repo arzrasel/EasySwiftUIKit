@@ -1159,6 +1159,10 @@ public extension String {
         return convertedSentence
     }
 }
+public func logData(object: Any, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) -> String {
+    let className = (fileName as NSString).lastPathComponent
+    return "<\(className)> \(functionName) [#\(lineNumber)] | \(object)"
+}
 public func logInfo(object: Any, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) -> String {
     let className = (fileName as NSString).lastPathComponent
     return "<\(className)> \(functionName) [#\(lineNumber)] | \(object)"
