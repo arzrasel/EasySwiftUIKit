@@ -1159,6 +1159,18 @@ public extension String {
         return convertedSentence
     }
 }
+public func logInfo(object: Any, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) -> String {
+    let className = (fileName as NSString).lastPathComponent
+    return "<\(className)> \(functionName) [#\(lineNumber)] | \(object)"
+}
+//public func debugLog(object: Any, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
+//  #if DEBUG
+////        let className = (fileName as NSString).lastPathComponent
+////        print("<\(className)> \(functionName) [#\(lineNumber)]| \(object)\n")
+//  #endif
+//    let className = (fileName as NSString).lastPathComponent
+//    print("<\(className)> \(functionName) [#\(lineNumber)] | \(object)\n")
+//}
 public func onTest(value: String) {
     print("Tying to print the value: \(value)")
 }
