@@ -1172,9 +1172,13 @@ public var isDebugLog: Bool {
     get{return isDebug}
     set{isDebug = newValue}
 }
-public var setDebugLog: Bool {
-    get{return isDebug}
-    set{isDebug = newValue}
+//public var setDebugLog: Bool {
+//    get{return isDebug}
+//    set{isDebug = newValue}
+//}
+public func setDebugLog(isDebug argIsDebug: Bool) -> Bool {
+    isDebug = argIsDebug
+    return isDebug
 }
 public func debugLogPrint(object: Any, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
     if isDebug == false {
