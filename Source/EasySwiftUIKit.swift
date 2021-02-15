@@ -27,10 +27,10 @@ public extension UIImage {
             print("image doesn't exist")
             return nil
         }
-        
+
         return UIImage.animatedImageWithSource(source)
     }
-    
+
     class func gifImageWithURL(_ gifUrl:String) -> UIImage? {
         guard let bundleURL: URL = URL(string: gifUrl) else {
             print("image named \"\(gifUrl)\" doesn't exist")
@@ -40,10 +40,10 @@ public extension UIImage {
             print("image named \"\(gifUrl)\" into NSData")
             return nil
         }
-        
+
         return gifImageWithData(imageData)
     }
-    
+
     class func gifImageWithName(_ name: String) -> UIImage? {
         guard let bundleURL = Bundle.main
                 .url(forResource: name, withExtension: "gif") else {
@@ -54,19 +54,19 @@ public extension UIImage {
             print("SwiftGif: Cannot turn image named \"\(name)\" into NSData")
             return nil
         }
-        
+
         return gifImageWithData(imageData)
     }
-    
+
     class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
         var delay = 0.1
-        
+
         let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)
         let gifProperties: CFDictionary = unsafeBitCast(
             CFDictionaryGetValue(cfProperties,
                                  Unmanaged.passUnretained(kCGImagePropertyGIFDictionary).toOpaque()),
             to: CFDictionary.self)
-        
+
         var delayObject: AnyObject = unsafeBitCast(
             CFDictionaryGetValue(gifProperties,
                                  Unmanaged.passUnretained(kCGImagePropertyGIFUnclampedDelayTime).toOpaque()),
@@ -75,16 +75,16 @@ public extension UIImage {
             delayObject = unsafeBitCast(CFDictionaryGetValue(gifProperties,
                                                              Unmanaged.passUnretained(kCGImagePropertyGIFDelayTime).toOpaque()), to: AnyObject.self)
         }
-        
+
         delay = delayObject as! Double
-        
+
         if delay < 0.1 {
             delay = 0.1
         }
-        
+
         return delay
     }
-    
+
     class func gcdForPair(_ a: Int?, _ b: Int?) -> Int {
         var a = a
         var b = b
@@ -97,17 +97,17 @@ public extension UIImage {
                 return 0
             }
         }
-        
+
         if a < b {
             let c = a
             a = b
             b = c
         }
-        
+
         var rest: Int
         while true {
             rest = a! % b!
-            
+
             if rest == 0 {
                 return b!
             } else {
@@ -116,62 +116,62 @@ public extension UIImage {
             }
         }
     }
-    
+
     class func gcdForArray(_ array: Array<Int>) -> Int {
         if array.isEmpty {
             return 1
         }
-        
+
         var gcd = array[0]
-        
+
         for val in array {
             gcd = UIImage.gcdForPair(val, gcd)
         }
-        
+
         return gcd
     }
-    
+
     class func animatedImageWithSource(_ source: CGImageSource) -> UIImage? {
         let count = CGImageSourceGetCount(source)
         var images = [CGImage]()
         var delays = [Int]()
-        
+
         for i in 0..<count {
             if let image = CGImageSourceCreateImageAtIndex(source, i, nil) {
                 images.append(image)
             }
-            
+
             let delaySeconds = UIImage.delayForImageAtIndex(Int(i),
                                                             source: source)
             delays.append(Int(delaySeconds * 1000.0)) // Seconds to ms
         }
-        
+
         let duration: Int = {
             var sum = 0
-            
+
             for val: Int in delays {
                 sum += val
             }
-            
+
             return sum
         }()
-        
+
         let gcd = gcdForArray(delays)
         var frames = [UIImage]()
-        
+
         var frame: UIImage
         var frameCount: Int
         for i in 0..<count {
             frame = UIImage(cgImage: images[Int(i)])
             frameCount = Int(delays[Int(i)] / gcd)
-            
+
             for _ in 0..<frameCount {
                 frames.append(frame)
             }
         }
-        
+
         let animation = UIImage.animatedImage(with: frames, duration: Double(duration) / 1000.0)
-        
+
         return animation
     }
     //iOSDevCenters+GIF.swift
@@ -181,18 +181,18 @@ public extension UIImageView {
         guard let image = image else { return bounds }
         guard contentMode == .scaleAspectFit else { return bounds }
         guard image.size.width > 0 && image.size.height > 0 else { return bounds }
-        
+
         let scale: CGFloat
         if image.size.width > image.size.height {
             scale = bounds.width / image.size.width
         } else {
             scale = bounds.height / image.size.height
         }
-        
+
         let size = CGSize(width: image.size.width * scale, height: image.size.height * scale)
         let x = (bounds.width - size.width) / 2.0
         let y = (bounds.height - size.height) / 2.0
-        
+
         return CGRect(x: x, y: y, width: size.width, height: size.height)
     }
 }
@@ -241,7 +241,7 @@ public extension NSAttributedString {
         let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, context: nil)
         return ceil(boundingBox.height)
     }
-    
+
     func width(withConstrainedHeight height: CGFloat) -> CGFloat {
         let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
         let boundingBox = boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, context: nil)
@@ -254,7 +254,7 @@ public extension String {
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         return ceil(boundingBox.height)
     }
-    
+
     func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
@@ -273,13 +273,13 @@ public extension String {
         let size = self.size(withAttributes: fontAttributes)
         return size.width
     }
-    
+
     func heightOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
         return size.height
     }
-    
+
     func sizeOfString(usingFont font: UIFont) -> CGSize {
         let fontAttributes = [NSAttributedString.Key.font: font]
         return self.size(withAttributes: fontAttributes)
@@ -358,7 +358,7 @@ public extension String {
     func fileName() -> String {
         return URL(fileURLWithPath: self).deletingPathExtension().lastPathComponent
     }
-    
+
     func fileExtension() -> String {
         return URL(fileURLWithPath: self).pathExtension
     }
@@ -611,7 +611,7 @@ public extension UIViewController {
         self.view.window!.layer.add(transition, forKey: kCATransition)
         present(viewControllerToPresent, animated: false)
     }
-    
+
     func dismissDetail() {
         let transition = CATransition()
         transition.duration = 0.25
@@ -730,13 +730,13 @@ public extension UIImage {
     var breadthSize: CGSize  { .init(width: breadth, height: breadth) }
     var breadthRect: CGRect  { .init(origin: .zero, size: breadthSize) }
     func rounded(with color: UIColor, width: CGFloat) -> UIImage? {
-        
+
         guard let cgImage = cgImage?.cropping(to: .init(origin: .init(x: isLandscape ? ((size.width-size.height)/2).rounded(.down) : .zero, y: isPortrait ? ((size.height-size.width)/2).rounded(.down) : .zero), size: breadthSize)) else { return nil }
-        
+
         let bleed = breadthRect.insetBy(dx: -width, dy: -width)
         let format = imageRendererFormat
         format.opaque = false
-        
+
         return UIGraphicsImageRenderer(size: bleed.size, format: format).image { context in
             UIBezierPath(ovalIn: .init(origin: .zero, size: bleed.size)).addClip()
             var strokeRect =  breadthRect.insetBy(dx: -width/2, dy: -width/2)
@@ -789,7 +789,7 @@ public enum RoundType {
 public extension UIView {
     func round(with type: RoundType, radius: CGFloat = 3.0) {
         var corners: UIRectCorner
-        
+
         switch type {
         case .top:
             corners = [.topLeft, .topRight]
@@ -809,13 +809,13 @@ public extension UIView {
     }
 }
 public extension UIVisualEffectView {
-    
+
     func fadeInEffect(_ style:UIBlurEffect.Style = .light, withDuration duration: TimeInterval = 1.0) {
         if #available(iOS 10.0, *) {
             let animator = UIViewPropertyAnimator(duration: duration, curve: .easeIn) {
                 self.effect = UIBlurEffect(style: style)
             }
-            
+
             animator.startAnimation()
         }else {
             // Fallback on earlier versions
@@ -824,13 +824,13 @@ public extension UIVisualEffectView {
             }
         }
     }
-    
+
     func fadeOutEffect(withDuration duration: TimeInterval = 1.0) {
         if #available(iOS 10.0, *) {
             let animator = UIViewPropertyAnimator(duration: duration, curve: .linear) {
                 self.effect = nil
             }
-            
+
             animator.startAnimation()
             animator.fractionComplete = 1
         }else {
@@ -848,7 +848,7 @@ public extension UIImageView {
         isUserInteractionEnabled = true
         addGestureRecognizer(pinchGesture)
     }
-    
+
     @objc
     private func startZooming(_ sender: UIPinchGestureRecognizer) {
         let scaleResult = sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale)
@@ -1056,25 +1056,25 @@ public extension UIView {
 public extension UIView {
     func makeBlurEffectView(style:UIBlurEffect.Style? = nil) -> UIVisualEffectView{
         let blurEffectView = UIVisualEffectView()
-        
+
         if let style = style {
             blurEffectView.effect = UIBlurEffect(style: style)
         }
-        
+
         blurEffectView.frame = self.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
+
         return blurEffectView
     }
-    
+
     func addBlurEffectView(sendBack:Bool = false) -> UIVisualEffectView{
         let blurEffectView = makeBlurEffectView()
         self.addSubview(blurEffectView)
-        
+
         if sendBack {
             self.sendSubviewToBack(blurEffectView)
         }
-        
+
         return blurEffectView
     }
 }
@@ -1120,7 +1120,7 @@ public extension String {
             if sentence.first == " "{
                 sentence.removeFirst()
             }
-            
+
             if sentence.first != nil{
                 convertedSentence += sentence.prefix(1).uppercased() + String(sentence.dropFirst() + " ")
             }
@@ -1151,7 +1151,7 @@ public extension String {
             if sentence.first == " "{
                 sentence.removeFirst()
             }
-            
+
             if sentence.first != nil{
                 convertedSentence += sentence.prefix(1).uppercased() + String(sentence.dropFirst() + "." + " ")
             }
@@ -1168,7 +1168,7 @@ public func logInfo(object: Any, functionName: String = #function, fileName: Str
     return "<\(className)> \(functionName) [#\(lineNumber)] | \(object)"
 }
 internal var isDebug = false
-public var setDebugLod: Bool {
+public var setDebugLog: Bool {
     get{return isDebug}
     set{isDebug = newValue}
 }
