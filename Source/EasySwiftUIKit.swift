@@ -1167,6 +1167,25 @@ public func logInfo(object: Any, functionName: String = #function, fileName: Str
     let className = (fileName as NSString).lastPathComponent
     return "<\(className)> \(functionName) [#\(lineNumber)] | \(object)"
 }
+internal var isDebug = false
+public var setDebugLod: Bool {
+    get{return isDebug}
+    set{isDebug = newValue}
+}
+public func debugLogPrint(object: Any, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
+    if isDebug == false {
+        return
+    }
+    let className = (fileName as NSString).lastPathComponent
+    print("DEBUG_LOG_PRINT: " + message + " <\(className)> \(functionName) [\(lineNumber)] | \(object)")
+}
+public func debugLog(object: Any, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
+    if isDebug == false {
+        return
+    }
+    let className = (fileName as NSString).lastPathComponent
+    print("DEBUG_LOG_PRINT: " + message + " <\(className)> \(functionName) [\(lineNumber)] | \(object)")
+}
 //public func debugLog(object: Any, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
 //  #if DEBUG
 ////        let className = (fileName as NSString).lastPathComponent

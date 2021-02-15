@@ -22,15 +22,4 @@ extension String {
         return (self as NSString).mimeType()
     }
 }
-internal var isDebug = false
-public var setDebugLod: Bool {
-    get{return isDebug}
-    set{isDebug = newValue}
-}
-public func debugLog(object: Any, message: String, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line) {
-    if isDebug == false {
-        return
-    }
-    let className = (fileName as NSString).lastPathComponent
-    print("DEBUG_LOG_PRINT: " + message + " <\(className)> \(functionName) [\(lineNumber)] | \(object)")
-}
+
