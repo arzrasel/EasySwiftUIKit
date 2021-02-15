@@ -1168,6 +1168,10 @@ public func logInfo(object: Any, functionName: String = #function, fileName: Str
     return "<\(className)> \(functionName) [#\(lineNumber)] | \(object)"
 }
 internal var isDebug = false
+public var isDebugLog: Bool {
+    get{return isDebug}
+    set{isDebug = newValue}
+}
 public var setDebugLog: Bool {
     get{return isDebug}
     set{isDebug = newValue}
