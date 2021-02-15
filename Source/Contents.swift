@@ -38,6 +38,9 @@ public extension NSAttributedString {
         self.init(string: text, attributes: [NSAttributedString.Key.kern: kerning!, NSAttributedString.Key.font: font!, NSAttributedString.Key.foregroundColor: color!])
     }
 }
+public func getGlobal() -> AnyObject! {
+    return UIApplication.shared.delegate
+}
 //// Example Usage
 //var testString: String = "Hello World"
 //
