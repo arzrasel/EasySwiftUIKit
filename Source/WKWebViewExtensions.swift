@@ -29,3 +29,13 @@ extension WKWebView {
         loadHTMLString(htmlString, baseURL: Bundle.main.resourceURL)
     }
 }
+func getWebViewUrl(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) -> String! {
+    var urlStr: String! = nil
+    if let data = navigationAction.request.url?.absoluteString {
+        //urlStr is what you want
+//        print("=========decidePolicyFor: \(urlStr)")
+        urlStr = data
+    }
+    decisionHandler(.allow)
+    return urlStr
+}
