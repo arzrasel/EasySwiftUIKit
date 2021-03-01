@@ -2,7 +2,7 @@
 //  DoubleExtensions.swift
 //  EasySwiftUIKit
 //
-//  Created by Rz Rasel on 2/28/21.
+//  Created by Rz Rasel on 2021-02-28
 //
 
 import Foundation
