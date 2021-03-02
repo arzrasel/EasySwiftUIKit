@@ -36,4 +36,4 @@ Md. Rashed - Uz - Zaman (Rz Rasel)
 
 EasySwiftUIKit is available under the MIT license. See the LICENSE file for more info.
 
-https://github.com/goktugyil/EZSwiftExtensions
+<!--https://github.com/goktugyil/EZSwiftExtensions-->
