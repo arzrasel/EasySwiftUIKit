@@ -15,6 +15,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+- iOS 11
+- Swift 5
+- Xcode 12
+
 ## Installation
 
 EasySwiftUIKit is available through [CocoaPods](https://cocoapods.org/pods/EasySwiftUIKit). To install
