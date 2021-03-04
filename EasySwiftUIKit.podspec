@@ -5,19 +5,6 @@
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
-# CREATE
-#   * pod lib create EasySwiftUIKit
-#   * ios>swift>yes>None>No
-#   * Push to git and release
-#   * pod trunk register rashedgit@gmail.com 'Rz Rasel'
-#   * pod lib lint EasySwiftUIKit.podspec --allow-warnings
-#   * [pod lib lint SocketIOClient.podspec --allow-warnings --no-clean --verbose]
-#   * pod trunk push --allow-warnings
-# UPDATE
-#   * pod lib lint --allow-warnings
-#   * [pod lib lint --allow-warnings --no-clean --verbose]
-#   * Push to git and release
-#   * pod trunk push --allow-warnings >>>ORRR>>> pod trunk push EasySwiftUIKit.podspec --allow-warnings
 # EasySwiftUIKit Version - 1.0.4.01
 
 Pod::Spec.new do |s|
