@@ -2,7 +2,7 @@
 //  RedirectView.swift
 //  EasySwiftUIKit
 //
-//  Created by Rz Rasel on 3/4/21.
+//  Created by Rz Rasel on 2021-03-04
 //
 
 import Foundation
