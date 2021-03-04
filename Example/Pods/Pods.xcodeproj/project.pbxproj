@@ -16,6 +16,7 @@
 		8845FC9A25BBD101008D68A0 /* QuantumValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8845FC9925BBD101008D68A0 /* QuantumValue.swift */; };
 		8863ADF125B2FA9800ABD6F0 /* EasySwiftUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */; };
 		8871BDF625D4048F00270E97 /* RingtonePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8871BDF525D4048F00270E97 /* RingtonePlayer.swift */; };
+		887E6A2925F0DFAA001A792C /* RedirectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887E6A2825F0DFAA001A792C /* RedirectView.swift */; };
 		887EC6ED25D7987900BA93BC /* MimeTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC6EC25D7987900BA93BC /* MimeTypeList.swift */; };
 		887EC70F25D7BC7B00BA93BC /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC70E25D7BC7B00BA93BC /* ImageExtensions.swift */; };
 		887EC72125D7DB7A00BA93BC /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC72025D7DB7A00BA93BC /* MimeType.swift */; };
@@ -68,6 +69,7 @@
 		8845FC9925BBD101008D68A0 /* QuantumValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantumValue.swift; sourceTree = "<group>"; };
 		8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySwiftUIKit.swift; sourceTree = "<group>"; };
 		8871BDF525D4048F00270E97 /* RingtonePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingtonePlayer.swift; sourceTree = "<group>"; };
+		887E6A2825F0DFAA001A792C /* RedirectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectView.swift; sourceTree = "<group>"; };
 		887EC6EC25D7987900BA93BC /* MimeTypeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeTypeList.swift; sourceTree = "<group>"; };
 		887EC70E25D7BC7B00BA93BC /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		887EC72025D7DB7A00BA93BC /* MimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
@@ -208,17 +210,18 @@
 				88D3359A25CA7A1B005A735B /* AlignedCollectionView.swift */,
 				88FE166025C7BA860016D8B1 /* Contents.swift */,
 				88319A9025C6B6A6002A2B20 /* DateFormat.swift */,
+				88D6618A25EBA1ED00752FAD /* DoubleExtensions.swift */,
 				8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */,
 				8845FC9425BBD0F1008D68A0 /* FileUtils.swift */,
 				887EC70E25D7BC7B00BA93BC /* ImageExtensions.swift */,
 				887EC72025D7DB7A00BA93BC /* MimeType.swift */,
 				887EC6EC25D7987900BA93BC /* MimeTypeList.swift */,
 				8845FC9925BBD101008D68A0 /* QuantumValue.swift */,
+				887E6A2825F0DFAA001A792C /* RedirectView.swift */,
 				8871BDF525D4048F00270E97 /* RingtonePlayer.swift */,
 				88FE166A25C7C0A40016D8B1 /* StringExtensions.swift */,
 				88FE166525C7BE210016D8B1 /* UserDefaultsExtension.swift */,
 				88D6618525EBA19700752FAD /* WKWebViewExtensions.swift */,
-				88D6618A25EBA1ED00752FAD /* DoubleExtensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				88D6618B25EBA1ED00752FAD /* DoubleExtensions.swift in Sources */,
 				88FE166125C7BA860016D8B1 /* Contents.swift in Sources */,
 				8845FC9A25BBD101008D68A0 /* QuantumValue.swift in Sources */,
+				887E6A2925F0DFAA001A792C /* RedirectView.swift in Sources */,
 				8863ADF125B2FA9800ABD6F0 /* EasySwiftUIKit.swift in Sources */,
 				88319A9125C6B6A6002A2B20 /* DateFormat.swift in Sources */,
 				887EC70F25D7BC7B00BA93BC /* ImageExtensions.swift in Sources */,
