@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RedirectView {
+open class RedirectView {
     private var storyboard: UIStoryboard!
     private var viewController: UIViewController!
     
