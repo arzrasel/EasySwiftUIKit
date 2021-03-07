@@ -45,6 +45,19 @@ case .failure(let error):
 }
 ```
 
+## Decode string or int value in structure
+
+```DecodeQuantumValue
+struct ModelData: Decodable {
+    var name: String!
+    var data: QuantumValue!
+}
+let modelData = ModelData(name: "Rz Rasel", data: 1)
+let modelData = ModelData(name: "Rz Rasel", data: "Rashed - Uz - Zaman")
+let intValue = modelData.data.intValue
+let strValue = modelData.data.stringValue
+```
+
 ## Author
 
 Md. Rashed - Uz - Zaman (Rz Rasel)
