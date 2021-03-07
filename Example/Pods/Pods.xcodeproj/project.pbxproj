@@ -20,6 +20,7 @@
 		887EC6ED25D7987900BA93BC /* MimeTypeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC6EC25D7987900BA93BC /* MimeTypeList.swift */; };
 		887EC70F25D7BC7B00BA93BC /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC70E25D7BC7B00BA93BC /* ImageExtensions.swift */; };
 		887EC72125D7DB7A00BA93BC /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EC72025D7DB7A00BA93BC /* MimeType.swift */; };
+		8887F69225F4B2B300F4E9B3 /* JSONExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887F69125F4B2B300F4E9B3 /* JSONExtensions.swift */; };
 		88D3359B25CA7A1B005A735B /* AlignedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D3359A25CA7A1B005A735B /* AlignedCollectionView.swift */; };
 		88D6618625EBA19700752FAD /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D6618525EBA19700752FAD /* WKWebViewExtensions.swift */; };
 		88D6618B25EBA1ED00752FAD /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D6618A25EBA1ED00752FAD /* DoubleExtensions.swift */; };
@@ -73,6 +74,7 @@
 		887EC6EC25D7987900BA93BC /* MimeTypeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeTypeList.swift; sourceTree = "<group>"; };
 		887EC70E25D7BC7B00BA93BC /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
 		887EC72025D7DB7A00BA93BC /* MimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
+		8887F69125F4B2B300F4E9B3 /* JSONExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONExtensions.swift; sourceTree = "<group>"; };
 		88D3359A25CA7A1B005A735B /* AlignedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignedCollectionView.swift; sourceTree = "<group>"; };
 		88D6618525EBA19700752FAD /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
 		88D6618A25EBA1ED00752FAD /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				88FE166A25C7C0A40016D8B1 /* StringExtensions.swift */,
 				88FE166525C7BE210016D8B1 /* UserDefaultsExtension.swift */,
 				88D6618525EBA19700752FAD /* WKWebViewExtensions.swift */,
+				8887F69125F4B2B300F4E9B3 /* JSONExtensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				8863ADF125B2FA9800ABD6F0 /* EasySwiftUIKit.swift in Sources */,
 				88319A9125C6B6A6002A2B20 /* DateFormat.swift in Sources */,
 				887EC70F25D7BC7B00BA93BC /* ImageExtensions.swift in Sources */,
+				8887F69225F4B2B300F4E9B3 /* JSONExtensions.swift in Sources */,
 				88FE166625C7BE210016D8B1 /* UserDefaultsExtension.swift in Sources */,
 				72C6541203D47F85D8BCA64C29F67626 /* EasySwiftUIKit-dummy.m in Sources */,
 			);
