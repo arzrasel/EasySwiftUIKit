@@ -52,10 +52,17 @@ struct ModelData: Decodable {
     var name: String!
     var data: QuantumValue!
 }
-let modelData = ModelData(name: "Rz Rasel", data: 1)
-let modelData = ModelData(name: "Rz Rasel", data: "Rashed - Uz - Zaman")
-let intValue = modelData.data.intValue
+let modelData = ModelData(name: "Rz Rasel", data: QuantumValue.string("Rashed - Uz - Zaman"))
+let modelDataList = [
+    ModelData(name: "Rz Rasel", data: QuantumValue.int(1)),
+    ModelData(name: "Rz Rasel", data: QuantumValue.string("Rashed - Uz - Zaman"))
+]
 let strValue = modelData.data.stringValue
+for item in modelDataList {
+    let name = item.name
+    let intVal = item.data.intValue
+    let strVal = item.data.stringValue
+}
 ```
 
 ## Author
