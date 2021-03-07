@@ -27,22 +27,22 @@ open class JSONHelper {
         return JSONParser.parseJSON(dataModel: dataModel, jsonData: argJSONData)
     }
     public static func parse<T: Codable>(dataModel: T.Type, jsonData argJSONData: Data) -> Result<T, Error> {
-        return JSONParser.parseJSON(dataModel: dataModel, jsonData: argJSONData)
+        return JSONParser.parse(dataModel: dataModel, jsonData: argJSONData)
     }
     public static func parse<T: Codable>(dataModel: [T].Type, jsonData argJSONData: Data) -> Result<[T], Error> {
-        return JSONParser.parseJSON(dataModel: dataModel, jsonData: argJSONData)
+        return JSONParser.parse(dataModel: dataModel, jsonData: argJSONData)
     }
     public static func parse<T: Codable>(dataModel: T.Type, jsonData argJSONData: Any) -> Result<T, Error> {
-        return JSONParser.parseJSON(dataModel: dataModel, jsonData: argJSONData)
+        return JSONParser.parse(dataModel: dataModel, jsonData: argJSONData)
     }
     public static func parse<T: Codable>(dataModel: [T].Type, jsonData argJSONData: Any) -> Result<[T], Error> {
-        return JSONParser.parseJSON(dataModel: dataModel, jsonData: argJSONData)
+        return JSONParser.parse(dataModel: dataModel, jsonData: argJSONData)
     }
     public static func parse<T: Codable>(dataModel: T.Type, jsonData argJSONData: String) -> Result<T, Error> {
-        return JSONParser.parseJSON(dataModel: dataModel, jsonData: argJSONData)
+        return JSONParser.parse(dataModel: dataModel, jsonData: argJSONData)
     }
     public static func parse<T: Codable>(dataModel: [T].Type, jsonData argJSONData: String) -> Result<[T], Error> {
-        return JSONParser.parseJSON(dataModel: dataModel, jsonData: argJSONData)
+        return JSONParser.parse(dataModel: dataModel, jsonData: argJSONData)
     }
 }
 open class JSONParser {
