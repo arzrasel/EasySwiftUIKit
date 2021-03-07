@@ -62,6 +62,8 @@ for item in modelDataList {
     let name = item.name
     let intVal = item.data.intValue
     let strVal = item.data.stringValue
+    let safeIntVal = item.data?.intValue
+    let safeStrVal = item.data?.stringValue
 }
 ```
 
