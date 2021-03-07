@@ -32,6 +32,12 @@ or
 pod 'EasySwiftUIKit', '~> 1.0'
 ```
 
+## Integration In Project
+
+```IntegrationInProject
+import EasySwiftUIKit
+```
+
 ## Parse JSON
 
 ```JSONParseWay001
