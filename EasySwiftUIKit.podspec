@@ -5,11 +5,11 @@
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
-# EasySwiftUIKit Version - 1.0.4.05
+# EasySwiftUIKit Version - 1.0.4.06
 
 Pod::Spec.new do |s|
     s.name             = 'EasySwiftUIKit'
-    s.version          = '1.0.4.05'
+    s.version          = '1.0.4.06'
     s.summary          = 'A short description of EasySwiftUIKit.'
 
     # This description is used to generate tags and improve search results.
