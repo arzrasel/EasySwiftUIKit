@@ -45,7 +45,7 @@ case .failure(let error):
 }
 ```
 
-## Decode string or int value in structure
+## Quantum Value: Decode string or int value in structure
 
 ```DecodeQuantumValue
 struct ModelData: Decodable {
