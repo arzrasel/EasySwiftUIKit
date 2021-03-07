@@ -216,6 +216,7 @@
 				8863ADF025B2FA9800ABD6F0 /* EasySwiftUIKit.swift */,
 				8845FC9425BBD0F1008D68A0 /* FileUtils.swift */,
 				887EC70E25D7BC7B00BA93BC /* ImageExtensions.swift */,
+				8887F69125F4B2B300F4E9B3 /* JSONExtensions.swift */,
 				887EC72025D7DB7A00BA93BC /* MimeType.swift */,
 				887EC6EC25D7987900BA93BC /* MimeTypeList.swift */,
 				8845FC9925BBD101008D68A0 /* QuantumValue.swift */,
@@ -224,7 +225,6 @@
 				88FE166A25C7C0A40016D8B1 /* StringExtensions.swift */,
 				88FE166525C7BE210016D8B1 /* UserDefaultsExtension.swift */,
 				88D6618525EBA19700752FAD /* WKWebViewExtensions.swift */,
-				8887F69125F4B2B300F4E9B3 /* JSONExtensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";

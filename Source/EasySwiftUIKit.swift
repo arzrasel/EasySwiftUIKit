@@ -420,7 +420,7 @@ public extension Data {
     func jsonDecode<T: Codable>() throws -> T {
         try JSONDecoder().decode(T.self, from: self)
     }
-    func parseJSON<T: Decodable>(jsonData: Data, returnModelType: T.Type) -> Result<T,Error> {
+    func parseJSON<T: Decodable>(jsonData: Data, returnModelType: T.Type) -> Result<T, Error> {
         return Result { try JSONDecoder().decode(returnModelType.self, from: jsonData) }
 //        do {
 //            let decodedData = try JSONDecoder().decode(returnModelType.self, from: jsonData)
