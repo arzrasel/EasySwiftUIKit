@@ -32,6 +32,19 @@ or
 pod 'EasySwiftUIKit', '~> 1.0'
 ```
 
+## Parse JSON
+
+```JSONParseWay001
+let jsonResult = JSONParser.parseJSON(dataModel: [DataModel].self, jsonData: response)
+switch jsonResult {
+case .success(let result):
+    for item in result {
+    }
+case .failure(let error):
+    print("Error: \(error)")
+}
+```
+
 ## Author
 
 Md. Rashed - Uz - Zaman (Rz Rasel)
