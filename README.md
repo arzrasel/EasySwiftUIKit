@@ -58,6 +58,30 @@ or
 let date = "2021-02-28 12:24:26".dateToDate(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
 ```
 
+### Date Format in Swift
+
+```DateFormatInSwiftFour
+let format = DateFormat()
+    .year(.fourDigits)
+    .separator(.dash)
+    .month(.zeroPaddedNumber)
+    .separator(.dash)
+    .day(.zeroPaddedNumber)
+    .string("T")
+    .hour(.zeroPaddedTwentyFourHour)
+    .separator(.colon)
+    .minute(.zeroPaddedNumber)
+    .separator(.colon)
+    .second(.zeroPaddedNumber)
+    .timezone(.RFC822)
+
+let formatter = DateFormatter()
+formatter.setDateFormat(format)
+
+print(format.dateFormat) //yyyy-MM-dd'T'HH:mm:ssZ
+//format.dateFormat - return the date format as like: yyyy-MM-dd'T'HH:mm:ssZ
+```
+
 ### Parse JSON
 
 ```JSONParseWay001
