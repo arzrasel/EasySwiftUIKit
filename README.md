@@ -74,16 +74,25 @@ case .failure(let error):
 ### Quantum Value: Decode string or int value in structure
 
 ```DecodeQuantumValue
+//struct data model
 struct ModelData: Decodable {
     var name: String!
     var data: QuantumValue!
 }
+
+//individual/single data model
 let modelData = ModelData(name: "Rz Rasel", data: QuantumValue.string("Rashed - Uz - Zaman"))
+
+//List of data model
 let modelDataList = [
     ModelData(name: "Rz Rasel", data: QuantumValue.int(1)),
     ModelData(name: "Rz Rasel", data: QuantumValue.string("Rashed - Uz - Zaman"))
 ]
+
+//Usages of list of data model
 let strValue = modelData.data.stringValue
+
+//Usages of individual/single data model
 for item in modelDataList {
     let name = item.name
     let intVal = item.data.intValue
