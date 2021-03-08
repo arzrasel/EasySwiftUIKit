@@ -41,8 +41,21 @@ import EasySwiftUIKit
 ## Date Format in Swift
 
 ```DateFormatInSwiftOne
-//stringDate.dateFormat(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy") return string formatted date
+//stringDate.dateFormat(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
+//Return formatted date in string form
 let date = "2021-03-28 12:24:26".dateFormat(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
+```
+or
+```DateFormatInSwiftTwo
+//stringDate.dateToString(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
+//Return formatted date in string form
+let date = "2021-02-28 12:24:26".dateToString(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
+```
+or
+```DateFormatInSwiftThree
+//stringDate.dateToDate(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
+//Return formatted date in date form
+let date = "2021-02-28 12:24:26".dateToDate(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
 ```
 
 ## Parse JSON
