@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol DateFormatConvertible {
+public protocol DateFormatConvertible {
     var dateFormat: String { get }
 }
 
 extension String: DateFormatConvertible {
-    var dateFormat: String { return self }
+    public var dateFormat: String { return self }
 }
 
 func + (lhs: DateFormatConvertible, rhs: DateFormatConvertible) -> DateFormatConvertible {

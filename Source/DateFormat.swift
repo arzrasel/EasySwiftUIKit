@@ -27,63 +27,63 @@ public extension String {
     }
 }
 
-struct DateFormat: DateFormatConvertible {
-    let dateFormat: String
+public struct DateFormat: DateFormatConvertible {
+    public let dateFormat: String
     
-    init() {
+    public init() {
         dateFormat = ""
     }
     
-    init(format: DateFormatConvertible) {
+    public init(format: DateFormatConvertible) {
         dateFormat = format.dateFormat
     }
     
-    init(formats: [DateFormatConvertible]) {
+    public init(formats: [DateFormatConvertible]) {
         dateFormat = formats.reduce("", +).dateFormat
     }
     
-    func year(_ style: YearStyle) -> DateFormat {
+    public func year(_ style: YearStyle) -> DateFormat {
         return DateFormat(formats: [dateFormat, style])
     }
     
-    func quarter(_ style: QuarterStyle) -> DateFormat {
+    public func quarter(_ style: QuarterStyle) -> DateFormat {
         return DateFormat(formats: [dateFormat, style])
     }
     
-    func month(_ style: MonthStyle) -> DateFormat {
+    public func month(_ style: MonthStyle) -> DateFormat {
         return DateFormat(formats: [dateFormat, style])
     }
     
-    func day(_ style: DayStyle) -> DateFormat {
+    public func day(_ style: DayStyle) -> DateFormat {
         return DateFormat(formats: [dateFormat, style])
     }
     
-    func hour(_ style: HourStyle) -> DateFormat {
+    public func hour(_ style: HourStyle) -> DateFormat {
         return DateFormat(formats: [dateFormat, style])
     }
     
-    func minute(_ style: MinuteStyle) -> DateFormat {
+    public func minute(_ style: MinuteStyle) -> DateFormat {
         return DateFormat(formats: [dateFormat, style])
     }
     
-    func second(_ style: SecondStyle) -> DateFormat {
+    public func second(_ style: SecondStyle) -> DateFormat {
         return DateFormat(formats: [dateFormat, style])
     }
     
-    func timezone(_ style: TimeZoneStyle) -> DateFormat {
+    public func timezone(_ style: TimeZoneStyle) -> DateFormat {
         return DateFormat(formats: [dateFormat, style])
     }
     
-    func separator(_ separator: Separator) -> DateFormat {
+    public func separator(_ separator: Separator) -> DateFormat {
         return DateFormat(formats: [dateFormat, separator])
     }
     
-    func string(_ string: String) -> DateFormat {
+    public func string(_ string: String) -> DateFormat {
         return DateFormat(formats: [dateFormat, "'", string, "'"])
     }
 }
 
-extension DateFormatter {
+public extension DateFormatter {
     func setDateFormat(_ format: DateFormatConvertible) {
         dateFormat = format.dateFormat
     }
