@@ -96,9 +96,12 @@ let modelDataList = [
 
 //Usages of list of data model
 for item in modelDataList {
-    let name = item.name
+
+    //Usages of QuantumValue data
     let intVal = item.data.intValue
     let strVal = item.data.stringValue
+
+    //Usages of QuantumValue data in data safety
     let safeIntVal = item.data?.intValue
     let safeStrVal = item.data?.stringValue
 }
