@@ -32,13 +32,13 @@ or
 pod 'EasySwiftUIKit', '~> 1.0'
 ```
 
-## Integration In Project
+### Integration In Project
 
 ```IntegrationInProject
 import EasySwiftUIKit
 ```
 
-## Date Format in Swift
+### Date Format in Swift
 
 ```DateFormatInSwiftOne
 //stringDate.dateFormat(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
@@ -58,7 +58,7 @@ or
 let date = "2021-02-28 12:24:26".dateToDate(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
 ```
 
-## Parse JSON
+### Parse JSON
 
 ```JSONParseWay001
 let jsonResult = JSONParser.parseJSON(dataModel: [DataModel].self, jsonData: response)
@@ -71,7 +71,7 @@ case .failure(let error):
 }
 ```
 
-## Quantum Value: Decode string or int value in structure
+### Quantum Value: Decode string or int value in structure
 
 ```DecodeQuantumValue
 struct ModelData: Decodable {
