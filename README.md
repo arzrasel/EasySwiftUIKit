@@ -38,6 +38,13 @@ pod 'EasySwiftUIKit', '~> 1.0'
 import EasySwiftUIKit
 ```
 
+## Date Format in Swift
+
+```DateFormatInSwiftOne
+//stringDate.dateFormat(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy") return string formatted date
+let date = "2021-03-28 12:24:26".dateFormat(toFormat: "yyyy-MM-dd HH:mm:ss", withFormat: "MMM dd,yyyy")
+```
+
 ## Parse JSON
 
 ```JSONParseWay001
