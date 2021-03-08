@@ -80,7 +80,7 @@ struct ModelData: Decodable {
     var data: QuantumValue!
 }
 
-//individual/single data model
+//Individual/single data model
 let modelData = ModelData(name: "Rz Rasel", data: QuantumValue.string("Rashed - Uz - Zaman"))
 
 //List of data model
