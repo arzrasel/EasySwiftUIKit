@@ -89,10 +89,10 @@ let modelDataList = [
     ModelData(name: "Rz Rasel", data: QuantumValue.string("Rashed - Uz - Zaman"))
 ]
 
-//Usages of list of data model
+//Usages of individual/single data model
 let strValue = modelData.data.stringValue
 
-//Usages of individual/single data model
+//Usages of list of data model
 for item in modelDataList {
     let name = item.name
     let intVal = item.data.intValue
